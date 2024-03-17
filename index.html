@@ -3,31 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="5501384.png" type="image/x-icon">
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="app">
-        <h1>Expense Tracker</h1>
-
-        <!-- Form to add a new expense -->
-        <form id="expense-form">
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" placeholder="Enter amount" required>
-
-            <label for="category">Category:</label>
-            <input type="text" id="category" placeholder="Enter category" required>
-
-            <label for="date">Date:</label>
-            <input type="date" id="date" required>
-
-            <button type="button" onclick="addExpense()">Add Expense</button>
+    <header>
+        <h1>Welcome back, Devashish Ghanshani</h1>
+        <h2>to your Expense Tracker</h2>
+    </header>
+    
+    <div class="container">
+        <h4>Your Balance</h4>
+        <h1 id="balance">&#x20B9;0.00</h1>
+    
+        <div class="inc-exp-container">
+            <div>
+                <h4>Income</h4>
+                <p id="money-plus" class="money plus">+&#x20B9;0.00</p>
+            </div>
+            <div>
+                <h4>Expense</h4>
+                <p id="money-minus" class="money minus">-&#x20B9;0.00</p>
+            </div>
+        </div>
+    
+        <h3>History</h3>
+        <ul id="list" class="list">
+            <!-- List of income and expense  -->
+        </ul>
+    
+        <h3>Add new transaction</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="text">Name</label>
+                <input type="text" id="text" placeholder="Enter name of transaction..." />
+            </div>
+            <div class="form-control">
+                <label for="amount">Amount <br />
+                </label>
+                <input type="number" id="amount" placeholder="Enter amount..." />
+            </div>
+            <button class="btn">Add transaction</button>
         </form>
-
-        <!-- Display the list of expenses -->
-        <div id="expense-list"></div>
     </div>
-
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
